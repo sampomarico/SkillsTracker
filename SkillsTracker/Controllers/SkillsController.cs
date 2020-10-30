@@ -57,10 +57,19 @@ namespace SkillsTracker
         {
 
             string values = "<h1>" + date + "</h1>" +
-                "<ol>" +
-                "<li>JavaScript: " + jsSkill + "</li>" +
-                "<li>C#: " + cSkill + "</li>" +
-                "<li>SQL: " + sqlSkill + "</li>";
+                "<table style= 'border: 1px solid black'>" +
+                "<tr style= 'border: 1px solid black'>" +
+                    "<th style= 'border: 1px solid black'>JavaScript</th>" +
+                    "<th style= 'border: 1px solid black'>C#</th>" +
+                    "<th style= 'border: 1px solid black'>SQL</th>" +
+                "</tr>" +
+                "<tr>" +
+                    "<td style= 'border: 1px solid black'>" + jsSkill + "</td>" +
+                    "<td style= 'border: 1px solid black'>" + cSkill + "</td>" +
+                    "<td style= 'border: 1px solid black'>" + sqlSkill + "</td>" +
+                "</tr>" +
+                "</table>";
+
             return Content(values, "text/html");
         }
     }
